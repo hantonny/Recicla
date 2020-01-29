@@ -297,7 +297,7 @@ margin:auto;
 margin-top: 40px;
 width: 315px;
 }
-span{
+.span_texto{
   font-size: 40px;
   padding-left: 35px;
 }
@@ -328,4 +328,8 @@ margin-bottom: 80px;
 margin-left: 900px;
 margin-top: -600px;
 width: 300px;
+}
+section{
+  margin: 40px;
+  padding: 20px;
 }

@@ -22,6 +22,18 @@ Route::get('/sobre', function(){
 
 
 Route::get('localiza', 'LocalController@listar_local')->name('localiza');
+
+Route::prefix('/local')->group(function(){
+    Route::get('/','LocalController@list')->name('local.list');//Listagem de Locais
+
+    Route::get('add', 'LocalController@add')->name('local.add'); //Tela de adição
+    Route::post('add', 'LocalController@addAction'); //Ação de adição
+
+    Route::get('edit/{id}', 'LocalController@edit')->name('local.edit'); //Tela de edição
+    Route::post('edit/{id}', 'LocalController@editAction'); //Ação de edição
+
+    Route::get('delete/{id}', 'LocalController@del')->name('local.del'); //Ação de deletar
+});
 Route::fallback(function(){
     return view('home');
 });
