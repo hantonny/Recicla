@@ -32,7 +32,7 @@ class LocalController extends Controller{
             ['nome'=>$nome,'lat'=>$lat,'lng'=>$lng]);
             return redirect()->route('local.list')->with('success', 'Adicionado com Sucesso!');
         }else{
-            return redirect()->route('local.add')->with('warning', 'Não preencheu o formulário corretamente!');
+            return redirect()->route('local.add')->with('warning', 'Não preencheu o formulário corretamente!')->withInput();
         }
         
     }

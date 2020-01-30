@@ -1,7 +1,6 @@
-@extends('layouts.estilorecicla')
+@extends('layouts.estiloadm')
 
 @section('content')
-<a type="button" class="btn btn-success" href="{{route('local.add')}}">Adicionar Local</a>
 <h1>Listagem de Locais</h1>
 @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -13,23 +12,23 @@
 @endif
 
     @if(count($list)> 0)
-    <table class="table">
+    <table class="table table-bordered table-sm">
         <thead class="thead-light">
-          <tr>
+          <tr class="text-center">
             <th scope="col">Nome</th>
             <th scope="col">Latitude</th>
             <th scope="col">Longitude </th>
-            <th scope="col" colspan=2>Ação </th>
+            <th scope="col" colspan=2 class="text-center table-bordered">Ação</th>
           </tr>
         </thead>
         <tbody>
             @foreach ($list as $item)
           <tr>
             <td>{{$item->nome}}</td>
-            <td>{{$item->lat}}</td>
-            <td>{{$item->lng}}</td>
-            <td><a href="{{route('local.edit', ['id'=>$item->id])}}" type="button" class="btn btn-primary">Editar</a></td>
-            <td><a href="{{route('local.del', ['id'=>$item->id])}}" type="button" class="btn btn-danger" 
+            <td class="text-center">{{$item->lat}}</td>
+            <td class="text-center">{{$item->lng}}</td>
+            <td class="text-center table-bordered"><a href="{{route('local.edit', ['id'=>$item->id])}}" type="button" class="btn btn-primary">Editar</a></td>
+            <td class="text-center table-bordered"><a href="{{route('local.del', ['id'=>$item->id])}}" type="button" class="btn btn-danger" 
               onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a></td>
           </tr>
           @endforeach

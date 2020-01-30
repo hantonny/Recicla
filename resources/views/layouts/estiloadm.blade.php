@@ -15,7 +15,8 @@
           <a href="{{route('home')}}" class="text-decoration-none"><p class="titulo-nav-menu">recicla</p></a>
           <div class="menu-nav">
             <a href="{{route('sobre')}}" class="menu-item text-decoration-none">Sobre</a>
-            <a href="{{route('login')}}" class="menu-item text-decoration-none">Login</a>
+            <a href="{{route('local.add')}}" class="menu-item text-decoration-none">Adicionar Local</a>
+            <a href="{{route('logout')}}" class="menu-item text-decoration-none">Sair</a>
             <a class="menu-botao text-decoration-none"href="{{route('localiza')}}"><button class="botao">LOCALIZAR</button></a>
           </div>
       </nav>
@@ -28,7 +29,8 @@
     <p class="autor-footer">© 2019 Hantonny Korrea. Todos os direitos reservados. </p>
     <div class="menu-footer">
       <a href="{{route('sobre')}}" class="menu-item-footer text-decoration-none">Sobre</a>
-      <a href="{{route('login')}}" class="menu-item-footer text-decoration-none">Login</a>
+      <a href="{{route('local.add')}}" class="menu-item text-decoration-none">Adicionar Local</a>
+      <a href="{{route('logout')}}" class="menu-item-footer text-decoration-none">Sair</a>
     </div>
   </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
