@@ -27,6 +27,7 @@ class LocalController extends Controller{
             $nome = $request->input('nome');
             $lat = $request->input('lat');
             $lng = $request->input('lng');
+            
 
             DB::insert('INSERT INTO local (nome,lat,lng) VALUES (:nome, :lat, :lng)', 
             ['nome'=>$nome,'lat'=>$lat,'lng'=>$lng]);
