@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 class LoginController extends Controller
 {
     /*
@@ -43,11 +44,18 @@ class LoginController extends Controller
     }
     public function authenticate(Request $request){
         $creds = $request->only(['email', 'password']);
+        $validator = Validator::make($creds,[
+            'email'=>['required', 'string', 'email', 'max:200'],
+            'password'=>['required', 'string','min:4']
+        ]);
         
+        if($validator->fails()){
+            return redirect()->route('login')->with('warning', 'E-mail e/ou senha inválidos!')->withInput()->withErrors($validator);
+        }
         if(Auth::attempt($creds)){
             return redirect()->route('local.list');
         }else{
-            return redirect()->route('login')->with('warning', 'E-mail e/ou senha inválidos!')->withInput();
+            return redirect()->route('login')->with('warning', 'E-mail e/ou senha inválidos!')->withInput()->withErrors($validator);
         }
     }
     public function logout(){

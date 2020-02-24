@@ -1,7 +1,6 @@
 @extends('layouts.estiloadm')
 
 @section('content')
-<h1>Adicionar</h1>
 
 @if(session('warning'))
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -11,22 +10,28 @@
             </button>
     </div>
 @endif
-<form method="POST">
-    @csrf
-    <div class="form-group">
-      <label for="nome"><strong>Nome</strong></label>
-      <input type="text" class="form-control" id="nome" name="nome" value="{{old('nome')}}">
-    </div>
-    <div class="form-group">
-        <label for="lat"><strong>Latitude</strong></label>
-        <input type="text" class="form-control" id="lat" name="lat" value="{{old('lat')}}">
-    </div>
-    <div class="form-group">
-        <label for="lng"><strong>Longitude</strong></label>
-        <input type="text" class="form-control" id="lng" name="lng" value="{{old('lng')}}">
-    </div>
-    <a class="btn btn-secondary" href="{{route('local.list')}}">Voltar</a>
-    <button type="submit" class="btn btn-primary">Adicionar</button>
-  </form>
-
+<div class="card border-success">
+  <div class="card-header text-white bg-success">
+    <h4><strong>Adicionar Local</strong></h4>
+  </div>
+  <div class="card-body bg-light">
+    <form method="POST">
+      @csrf
+      <div class="form-group">
+        <label for="nome"><strong>Nome:</strong></label>
+        <input type="text" class="form-control" id="nome" name="nome" value="{{old('nome')}}">
+      </div>
+      <div class="form-group">
+          <label for="lat"><strong>Latitude:</strong></label>
+          <input type="text" class="form-control" id="lat" name="lat" value="{{old('lat')}}">
+      </div>
+      <div class="form-group">
+          <label for="lng"><strong>Longitude:</strong></label>
+          <input type="text" class="form-control" id="lng" name="lng" value="{{old('lng')}}">
+      </div>
+      <a class="btn btn-secondary" href="{{route('local.list')}}">Voltar</a>
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+    </form>
+  </div>
+</div>
 @endsection

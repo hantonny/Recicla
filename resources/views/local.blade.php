@@ -1,33 +1,49 @@
 @extends('layouts.estilorecicla')
 
 @section('content')
-        <div class="div-localiza">
-        <h1 class="titulo-localiza">LOCALIZADOR</h1>
-        <div>
-          <button class="botao-funcao" id="show-listings"><a class="menu-botao text-decoration-none" href="#map">MOSTRAR</a></button>
-          <button class="botao-funcao" id="hide-listings"><a class="menu-botao text-decoration-none" href="#map">OCULTAR</a></button>
-        </div>
+<div class="container-fluid">
+<div class="card">
+  <div class="card-header">
+      <h4>LOCALIZADOR</h4>
+  </div>
+  <div class="card-body">
+    <form action="" method="post" class="form-group row">
+      <div class="col-sm-6 d-flex justify-content-center">
+        <a href="#map" class="btn btn-success form-control" id="show-listings">MOSTRAR</a>
+      </div>
+      <br>
+      <br>
+      <div class="col-sm-6 d-flex justify-content-center">
+        <a href="#map" class="btn btn-success form-control" id="hide-listings">OCULTAR</a>
+      </div>
+    </form>
+<form action="" method="post" class="form-group row">
+  <div class="col-sm-12">
+    <input id="search-within-time-text" type="text" 
+    placeholder="Ex: Rua Luis Roberto Salinas Fortes, nº 17"
+    class="form-control"><br>
+  </div>
+  
+    <div class="col-sm-6">
+        <select id="mode" class="form-control">
+          <option value="DRIVING">Carro</option>
+          <option value="WALKING">A pé</option>
+          <option value="BICYCLING">De Bicicleta</option>
+          <option value="TRANSIT">Transporte público</option>
+        </select>
+      </div>
+<br><br><br>
+    <div class="col-sm-2">
+      <a class="btn btn-success form-control" id="search-within-time" href="#map">BUSCAR</a>
+    </div>
+    <br>
+    <div id="map"></div>
+</form>
+  
+</div>
+</div>     
 
-        <div class="busca">
-        <input class="search" id="search-within-time-text" type="text" placeholder="Ex: Rua Luis Roberto Salinas Fortes, nº 17"><br>
-        </div>
-       
-        <div class="busca">
-            <select id="mode" class="busca-seleciona">
-              <option value="DRIVING">Carro</option>
-              <option value="WALKING">A pé</option>
-              <option value="BICYCLING">De Bicicleta</option>
-              <option value="TRANSIT">Transporte público</option>
-            </select>
-          </div>
-
-        <div class="busca">
-          <button class="botao-funcao-busca" id="search-within-time"><a class="menu-botao text-decoration-none" href="#map">BUSCAR</a></button>
-        </div>
-        
-        <div id="map"></div>
-
-        </div>
+</div>
         
         
 <script>
