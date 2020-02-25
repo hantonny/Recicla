@@ -39,6 +39,8 @@
             @endforeach
           </tbody>
         </table>
+        <ul class="pagination justify-content-center">{{$list->links()}}</ul>
+        
       </div>
       @else
           <p>Não há itens a serem listados</p>

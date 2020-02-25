@@ -15,8 +15,7 @@ class LocalController extends Controller{
         return view('local',$array);
     }
     public function list(){
-        $list = DB::select('SELECT * FROM local');
-
+        $list = Local::paginate(4);
         return view('admin.list', ['list'=>$list]);
     }
     public function add(){
