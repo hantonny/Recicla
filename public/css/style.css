@@ -15,16 +15,12 @@ body{
     margin: 20px;
   }
   .titulo-nav-menu{
-  width: 345px;
-  height: 116px;
-  margin-left: 98px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 95px;
-  line-height: 116px;
+  font-size: 50px;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.10em;
   color: #FFFFFF;
   
   }

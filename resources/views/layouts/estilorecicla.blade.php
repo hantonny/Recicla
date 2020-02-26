@@ -12,7 +12,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-md navbar-dark top bg-success">
-        <a class="navbar-brand" href="{{route('home')}}"><h1>Recicla</h1></a>
+        <a class="navbar-brand" href="{{route('home')}}"><h1 class="titulo-nav-menu"><strong>Recicla</strong></h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

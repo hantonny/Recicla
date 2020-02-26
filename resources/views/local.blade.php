@@ -2,19 +2,19 @@
 
 @section('content')
 <div class="container-fluid">
-<div class="card">
-  <div class="card-header">
-      <h4>LOCALIZADOR</h4>
+<div class="card border-success">
+  <div class="card-header text-white bg-success">
+      <h4><strong>LOCALIZADOR</strong></h4>
   </div>
   <div class="card-body">
     <form action="" method="post" class="form-group row">
       <div class="col-sm-6 d-flex justify-content-center">
-        <a href="#map" class="btn btn-success form-control" id="show-listings">MOSTRAR</a>
+        <a href="#map" class="btn btn-success form-control" id="show-listings"><strong>MOSTRAR</strong></a>
       </div>
       <br>
       <br>
       <div class="col-sm-6 d-flex justify-content-center">
-        <a href="#map" class="btn btn-success form-control" id="hide-listings">OCULTAR</a>
+        <a href="#map" class="btn btn-success form-control" id="hide-listings"><strong>OCULTAR</strong></a>
       </div>
     </form>
 <form action="" method="post" class="form-group row">
@@ -24,7 +24,7 @@
     class="form-control"><br>
   </div>
   
-    <div class="col-sm-6">
+    <div class="col-sm-8">
         <select id="mode" class="form-control">
           <option value="DRIVING">Carro</option>
           <option value="WALKING">A pé</option>
@@ -33,8 +33,8 @@
         </select>
       </div>
 <br><br><br>
-    <div class="col-sm-2">
-      <a class="btn btn-success form-control" id="search-within-time" href="#map">BUSCAR</a>
+    <div class="col-sm-4">
+      <a class="btn btn-success form-control" id="search-within-time" href="#map"><strong>BUSCAR</strong></a>
     </div>
     <br>
     <div id="map"></div>
