@@ -75,12 +75,13 @@ var map;
           }
         ];
         // O Constructor cria um novo mapa - somente o centro e o zoom são necessários.
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat:  -20.4435, lng: -54.6478},
-          zoom: 12,
+        var mapOptions = {
+          center: {lat:  -20.470108, lng: -54.614947},
+          zoom: 11,
           styles: styles,
           mapTypeControl: false
-        });
+        };
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
         // Esse preenchimento automático é para ser usado na caixa de entrada de pesquisa dentro do prazo.
         var timeAutocomplete = new google.maps.places.Autocomplete(
             document.getElementById('search-within-time-text'));
