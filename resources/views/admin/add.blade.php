@@ -29,6 +29,14 @@
           <label for="lng"><strong>Longitude:</strong></label>
           <input type="text" class="form-control" id="lng" name="lng" value="{{old('lng')}}">
       </div>
+      <div class="form-group">
+        <label for="lng"><strong>Horário que Abre:</strong></label>
+        <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_aberto" name="horario_aberto" value="{{old('horario_aberto')}}">
+      </div>
+      <div class="form-group">
+        <label for="lng"><strong>Horário que Fecha:</strong></label>
+        <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_fechado" name="horario_fechado" value="{{old('horario_fechado')}}">
+      </div>
       <a class="btn btn-secondary" href="{{route('local.list')}}">Voltar</a>
       <button type="submit" class="btn btn-primary">Adicionar</button>
     </form>

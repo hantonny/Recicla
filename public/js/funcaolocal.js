@@ -121,10 +121,12 @@ var map;
         for(var i = 0; i < locations.length; i++){
                 var position = locations[i].location;
                 var title = locations[i].title;
+                var text = locations[i].text;
 
                 var marker = new google.maps.Marker({
                     position: position,
                     title: title,
+                    text: text,
                     icon: defaultIcon,
                     animation: google.maps.Animation.DROP,
                     id: i
@@ -168,7 +170,7 @@ var map;
           infowindow.addListener('closeclick', function() {
             infowindow.marker = null;
           });
-          infowindow.setContent('<div id="pano"><h3>' + marker.title + '</h3></div>');
+          infowindow.setContent('<div id="pano" align="center"><h4>' + marker.title + '</h4><h6>Horário de Funcionamento: '+ marker.text + '</h6></div>');
           infowindow.open(map, marker);
         }
       }

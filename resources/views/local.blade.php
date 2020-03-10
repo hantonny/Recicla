@@ -53,7 +53,7 @@
 
           foreach($locais as $item){?>
           
-          {title: '<?php echo $item["nome"];?>', location: {lat: <?php echo $item["lat"];?>, 
+          {title: '<?php echo $item["nome"];?>', text:'<?php echo date("H:i",strtotime($item["horario_aberto"]))." às ".date("H:i",strtotime($item["horario_fechado"]));?>', location: {lat: <?php echo $item["lat"];?>, 
           lng:  <?php echo $item["lng"];?>}},
           
         <?php

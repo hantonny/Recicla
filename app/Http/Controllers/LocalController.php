@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Local;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class LocalController extends Controller{
@@ -15,7 +16,7 @@ class LocalController extends Controller{
         return view('local',$array);
     }
     public function list(){
-        $list = Local::paginate(4);
+        $list = Local::paginate(5);
         return view('admin.list', ['list'=>$list]);
     }
     public function add(){
@@ -26,10 +27,22 @@ class LocalController extends Controller{
             $nome = $request->input('nome');
             $lat = $request->input('lat');
             $lng = $request->input('lng');
-            
-            DB::insert('INSERT INTO local (nome,lat,lng) VALUES (:nome, :lat, :lng)', 
-            ['nome'=>$nome,'lat'=>$lat,'lng'=>$lng]);
-            return redirect()->route('local.list')->with('success', 'Adicionado com Sucesso!');
+            $horario_aberto = $request->input('horario_aberto');
+            $horario_fechado = $request->input('horario_fechado');
+
+            $data =$request->only(['nome','lat','lng']);
+            $validator = Validator::make($data,[
+                'nome'=>['required', 'string','max:100','unique:local'],
+                'lat'=>['required', 'string','max:100','unique:local'],
+                'lng'=>['required', 'string','max:100','unique:local']
+            ]);
+            if($validator->fails()){
+                return redirect()->route('local.add')->with('warning', 'Já existe esse local!')->withErrors($validator)->withInput();
+            }else{
+                DB::insert('INSERT INTO local (nome,lat,lng,horario_aberto,horario_fechado) VALUES (:nome, :lat, :lng, :horario_aberto, :horario_fechado)', 
+                ['nome'=>$nome,'lat'=>$lat,'lng'=>$lng, 'horario_aberto'=>$horario_aberto, 'horario_fechado'=>$horario_fechado]);
+                return redirect()->route('local.list')->with('success', 'Adicionado com Sucesso!');
+            }
         }else{
             return redirect()->route('local.add')->with('warning', 'Não preencheu o formulário corretamente!')->withInput();
         }
@@ -53,17 +66,22 @@ class LocalController extends Controller{
             $nome = $request->input('nome');
             $lat = $request->input('lat');
             $lng = $request->input('lng');
+            $horario_aberto = $request->input('horario_aberto');
+            $horario_fechado = $request->input('horario_fechado');
 
             $data = DB::select('SELECT * FROM local WHERE id = :id',[
                 'id'=>$id
             ]);
     
             if(count($data)>0){
-                DB::update('UPDATE local SET nome = :nome, lat = :lat, lng = :lng WHERE id = :id',[
+                DB::update('UPDATE local SET nome = :nome, lat = :lat, lng = :lng, horario_aberto = :horario_aberto,
+                horario_fechado = :horario_fechado WHERE id = :id',[
                     'id'=> $id,
                     'nome'=>$nome,
                     'lat'=>$lat,
-                    'lng'=>$lng
+                    'lng'=>$lng,
+                    'horario_aberto'=>$horario_aberto,
+                    'horario_fechado'=>$horario_fechado
                 ]);
             
             }
