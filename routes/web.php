@@ -21,7 +21,7 @@ Route::get('/sobre', function(){
 })->name('sobre');
 
 
-Route::get('localiza', 'LocalController@listar_local')->name('localiza');
+Route::get('localiza', 'LocalController@gerar_mapa')->name('localiza');
 
 Route::prefix('/local')->group(function(){
     Route::get('/','LocalController@list')->name('local.list')->middleware('auth');//Listagem de Locais

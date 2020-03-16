@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class LocalController extends Controller{
-    public function listar_local(){
+    public function gerar_mapa(){
         $locais = Local::all();
 
         $array = array('locais'=>$locais);

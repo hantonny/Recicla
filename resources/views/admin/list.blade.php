@@ -48,7 +48,7 @@
         
       </div>
       @else
-          <p>Não há itens a serem listados</p>
+          <h2 class="text-center">Não há locais cadastrados a serem listados</h2>
       @endif
       </div>
     </div> 

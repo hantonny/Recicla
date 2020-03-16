@@ -1,7 +1,7 @@
 @extends('layouts.estilorecicla')
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid" id="local">
 <div class="card border-success">
   <div class="card-header text-white bg-success">
       <h4><strong>LOCALIZADOR</strong></h4>
@@ -20,7 +20,7 @@
 <form action="" method="post" class="form-group row">
   <div class="col-sm-12">
     <input id="search-within-time-text" type="text" 
-    placeholder="Ex: Rua Luis Roberto Salinas Fortes, nº 17"
+    placeholder="Digite o seu endereço"
     class="form-control"><br>
   </div>
   

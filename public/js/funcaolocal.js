@@ -81,7 +81,14 @@ var map;
           styles: styles,
           mapTypeControl: false
         };
-        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        if(locations.length == 0 || locations == null){
+        document.getElementById('local').innerHTML = "<h3>Não há locais cadastrados no mapa.</h3>";
+        document.getElementById('local').style.width = "100%";
+        document.getElementById('local').style.height = "100%";
+        document.getElementById('local').style.textAlign = "center";
+        }else{
+          map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        }
         // Esse preenchimento automático é para ser usado na caixa de entrada de pesquisa dentro do prazo.
         var timeAutocomplete = new google.maps.places.Autocomplete(
             document.getElementById('search-within-time-text'));
@@ -118,31 +125,30 @@ var map;
         // mouses sobre o marcador. 
         var highlightedIcon = makeMarkerIcon('00FF7F');
         // O grupo a seguir usa a matriz de localização para criar uma matriz de marcadores na inicialização.
-        for(var i = 0; i < locations.length; i++){
-                var position = locations[i].location;
-                var title = locations[i].title;
-                var text = locations[i].text;
+          for(var i = 0; i < locations.length; i++){
+            var position = locations[i].location;
+            var title = locations[i].title;
+            var text = locations[i].text;
 
-                var marker = new google.maps.Marker({
-                    position: position,
-                    title: title,
-                    text: text,
-                    icon: defaultIcon,
-                    animation: google.maps.Animation.DROP,
-                    id: i
-                });
-                markers.push(marker);
-                marker.addListener('click', function(){
-                    populateInfoWindow(this, largeInfowindow);
-                });
-                marker.addListener('mouseover', function(){
-                    this.setIcon(highlightedIcon);
-                });
-                marker.addListener('mouseout', function(){
-                    this.setIcon(defaultIcon);
-                });
-            }
-           
+            var marker = new google.maps.Marker({
+                position: position,
+                title: title,
+                text: text,
+                icon: defaultIcon,
+                animation: google.maps.Animation.DROP,
+                id: i
+            });
+            markers.push(marker);
+            marker.addListener('click', function(){
+                populateInfoWindow(this, largeInfowindow);
+            });
+            marker.addListener('mouseover', function(){
+                this.setIcon(highlightedIcon);
+            });
+            marker.addListener('mouseout', function(){
+                this.setIcon(defaultIcon);
+            });
+        }
             //Mostra e esconde os marcadores
             document.getElementById('show-listings').addEventListener('click', showListings);
             document.getElementById('hide-listings').addEventListener('click', function() {
