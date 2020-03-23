@@ -4,7 +4,7 @@
 <div class="container-fluid">
   <div class="card border-success">
     <div class="card-header text-white bg-success">
-      <h1><strong>Lixo Eletrônico temos que recicla!</strong></h1>
+      <h1><strong>Lixo Eletrônico temos que reciclar!</strong></h1>
     </div>
     <div class="card-body bg-light">
       <div class="row">
@@ -15,7 +15,7 @@
                 <li><p class="p_home">Entre os países emergentes, o Brasil é o país que mais gera lixo eletrônico.</p></li>
                 <li><p class="p_home">A cada ano, o Brasil descarta: cerca de 97 mil toneladas métricas de computadores.</p></li>
               </ul>
-              <a href="{{route('localiza')}}"><button class="btn btn-primary" type="submit"><strong>LOCALIZAR</strong></button></a>
+              <a href="{{route('localiza')}}"><button class="btn btn-primary" type="submit"><strong>LOCALIZAR POSTO DE COLETA</strong></button></a>
         </div>
         <div class="col-sm-3">
           <img src="http://rbmanalises.com.br/wp-content/uploads/2017/04/Lixo-Eletr%C3%B4nico-01.png" alt="" class='img-fluid'>
