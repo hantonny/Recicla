@@ -9,7 +9,7 @@
             </button>
     </div>
 @endif
-<div class="card card_style">
+<div class="card card_style card-edit">
   <div class="card-header">
     <h4><strong>Editar</strong></h4>
   </div>

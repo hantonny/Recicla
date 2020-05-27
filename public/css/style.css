@@ -1,49 +1,76 @@
-body{
-    padding: 0px;
-    margin: 0px;
-    background: #FFFFFF;
-  }
-  section{
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px Roboto, sans-serif;
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea {
+    font: 400 18px Roboto, sans-serif;
+}
+section {
     margin: 50px;
     padding: 20px;
-  }
-  /*Estilo da Navegação*/
-  .navegacao{
-      background-color: #2BA378;
-  }
-  .titulo-nav-menu{
+}
+footer {
+    margin: auto;
+    margin-top: -170px;
+    height: 540px;
+    background-image: url('../footer.png');
+    background-repeat: no-repeat;
+    background-position-y: 10px;
+    background-position-x: 0px;
+}
+/*Estilo da Navegação*/
+
+.navegacao {
+    background-color: #2BA378;
+}
+
+.titulo-nav-menu {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 52px;
     line-height: 82px;
     color: #FFFFFF;
-  }
-  .menu-item{
-  text-decoration:none;
-  inline-size: auto;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  margin-left: 20px;
-  color: #FFFFFF;
+}
 
-  }
-  .navegacao .botao{
+.menu-item {
+    text-decoration: none;
+    inline-size: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    margin-left: 20px;
+    color: #FFFFFF;
+}
+
+.navegacao .botao {
     text-decoration: none;
     background-color: #11BA59;
     color: #FFFFFF;
-  }
-  /*Estilo do Mapa*/
-  #map{
+}
+
+/*Estilo do Mapa*/
+
+#map {
     width: 100%;
     height: 500px;
     margin-top: 20px;
-  }
-  /*Estilo da pagina sobre*/
-  .carrosel{
+}
+
+/*Estilo da pagina sobre*/
+
+.carrosel {
     width: 415px;
     height: 400px;
     background: #219653;
@@ -51,8 +78,9 @@ body{
     margin: auto;
     margin-top: 5px;
     border-radius: 10px;
-  }
-  .card-title{
+}
+
+.card-title {
     font-family: Lato;
     font-style: normal;
     font-weight: bold;
@@ -60,79 +88,122 @@ body{
     color: #FFFFFF;
     text-align: center;
     margin-top: 25px;
-  }
-  .card-text{
-  font-family: Lato;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: justify;
-  color: #FFFFFF;
-  margin:auto;
-  margin-top: 40px;
-  width: 315px;
-  }
-  .span_texto{
+}
+
+.card-text {
+    font-family: Lato;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    color: #FFFFFF;
+    margin: auto;
+    margin-top: 40px;
+    width: 315px;
+}
+
+.span_texto {
     font-size: 30px;
     padding-left: 35px;
-  }
-  .p_sobre{
-   font-size: 25px;
-   margin-top: 40px;
-  }
-  /*Estilo da pagina home*/
-  .titulo-home{
+}
+
+.p_sobre {
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+/*Estilo da pagina home*/
+
+.titulo-home {
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 62px;
     line-height: 94px;
-  }
-  .sub-titulo-home{
+}
+
+.sub-titulo-home {
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 25px;
     line-height: 29px;
     padding: 5px;
-  }
-  .p_home{
+}
+
+.p_home {
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
     line-height: 30px;
     padding: 5px;
-  }
-  /*Estilo dos formularios de login, adicionar e editar*/
-  .card_style{
-      max-width: 500px;
-      width: 100%;
-      margin: auto;
-      margin-top: -30px;
-  }
+}
+.botao_home{
+    margin-left: 475px;
+    margin-bottom: -300px;
+}
 
+/*Estilo dos formularios de login, adicionar e editar*/
 
-  @media only screen and (max-width: 600px) {
-    .menu-item{
-        display:flex;
-        justify-content:center;
-        align-items:center;
+.card_style {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: -30px;
+}
+
+.card-add {
+    margin-top: -10px;
+    margin-bottom: -260px;
+}
+
+.card-edit {
+    margin-top: -10px;
+    margin-bottom: -260px;
+}
+.card-login{
+    margin-top: -5px;
+    margin-bottom: -240px;
+}
+.alert{
+    margin-top: -60px;
+    margin-bottom: -20px;
+}
+@media only screen and (max-width: 600px) {
+    .menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 5px;
         font-size: 25px;
     }
-    .titulo-home{
+    .titulo-home {
         font-size: 32px;
         line-height: 30px;
     }
-    .sub-titulo-home{
+    .sub-titulo-home {
         font-size: 22px;
     }
-    .p_home{
+    .p_home {
         font-size: 18px;
     }
-    .navegacao .botao{
+    .navegacao .botao {
         margin-left: 170px;
         margin-top: 5px;
     }
-  }
+    footer {
+        display: block;
+        background-image: none;
+        height: 0px;
+    }
+    .botao_home{
+        margin-bottom: 0px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+}

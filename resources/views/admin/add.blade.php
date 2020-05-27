@@ -10,7 +10,7 @@
             </button>
     </div>
 @endif
-<div class="card card_style">
+<div class="card card_style card-add">
   <div class="card-header">
     <h4><strong>Adicionar Local</strong></h4>
   </div>

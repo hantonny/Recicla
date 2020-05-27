@@ -14,7 +14,7 @@
             @foreach($errors->all() as $error)
             @endforeach
 @endif
-<div class="card card_style">
+<div class="card card_style card-login">
   <div class="card-header">
     <h4><strong>Login</strong></h4>
   </div>
@@ -37,7 +37,7 @@
         <div class="form-group row">
           <label class="col-sm-2 col-form-label"></label>
           <div class="col-sm-10">
-          <button type="submit" class="btn btn-primary"><strong>Entrar</strong></button>
+          <button type="submit" class="btn btn-primary"><strong>ENTRAR</strong></button>
           </div>
         </div>
 
