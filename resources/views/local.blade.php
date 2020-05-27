@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container-fluid" id="local">
-<div class="card border-success">
-  <div class="card-header text-white bg-success">
+<div class="card">
+  <div class="card-header">
       <h4><strong>LOCALIZADOR</strong></h4>
   </div>
   <div class="card-body">
@@ -19,11 +19,11 @@
     </form>
 <form action="" method="post" class="form-group row">
   <div class="col-sm-12">
-    <input id="search-within-time-text" type="text" 
+    <input id="search-within-time-text" type="text"
     placeholder="Digite o seu endereço"
     class="form-control"><br>
   </div>
-  
+
     <div class="col-sm-8">
         <select id="mode" class="form-control">
           <option value="DRIVING">Carro</option>
@@ -39,23 +39,23 @@
     <br>
     <div id="map"></div>
 </form>
-  
-</div>
-</div>     
 
 </div>
-        
-        
+</div>
+
+</div>
+
+
 <script>
     //Locais marcados no mapa
         var locations = [
         <?php
 
           foreach($locais as $item){?>
-          
-          {title: '<?php echo $item["nome"];?>', text:'<?php echo date("H:i",strtotime($item["horario_aberto"]))." às ".date("H:i",strtotime($item["horario_fechado"]));?>', location: {lat: <?php echo $item["lat"];?>, 
+
+          {title: '<?php echo $item["nome"];?>', text:'<?php echo date("H:i",strtotime($item["horario_aberto"]))." às ".date("H:i",strtotime($item["horario_fechado"]));?>', location: {lat: <?php echo $item["lat"];?>,
           lng:  <?php echo $item["lng"];?>}},
-          
+
         <?php
           }
         ?>

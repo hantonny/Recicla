@@ -14,8 +14,8 @@
             @foreach($errors->all() as $error)
             @endforeach
 @endif
-<div class="card border-success">
-  <div class="card-header text-white bg-success">
+<div class="card card_style">
+  <div class="card-header">
     <h4><strong>Login</strong></h4>
   </div>
   <div class="card-body bg-light">
@@ -32,7 +32,7 @@
           <label for="lat" class="col-form-label col-sm-2"><strong>Senha:</strong></label>
           <div class="col-sm-10">
           <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Digite uma senha"><br>
-          </div>    
+          </div>
         </div>
         <div class="form-group row">
           <label class="col-sm-2 col-form-label"></label>
@@ -40,7 +40,7 @@
           <button type="submit" class="btn btn-primary"><strong>Entrar</strong></button>
           </div>
         </div>
-      
+
     </form>
   </div>
 </div>
