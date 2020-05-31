@@ -2,7 +2,7 @@
 
 @section('content')
 @if(session('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
             <strong>{{session('success')}}</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -13,7 +13,7 @@
     @if(count($list)> 0)
     <div class="card">
       <div class="card-header">
-        <h4><strong>Listagem de Locais</strong></h4>
+        <h4 class="text-center"><strong>Listagem de Locais</strong></h4>
       </div>
       <div class="card-body">
         <div class="table-responsive">

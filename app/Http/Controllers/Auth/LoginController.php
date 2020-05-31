@@ -48,7 +48,7 @@ class LoginController extends Controller
             'email'=>['required', 'string', 'email', 'max:200'],
             'password'=>['required', 'string','min:4']
         ]);
-        
+
         if($validator->fails()){
             return redirect()->route('login')->with('warning', 'E-mail e/ou senha inválidos!')->withInput()->withErrors($validator);
         }

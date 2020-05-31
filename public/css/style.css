@@ -27,6 +27,28 @@ footer {
     background-position-y: 10px;
     background-position-x: 0px;
 }
+.footer_h1{
+    position: absolute;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFFFFF;
+    margin-top: 430px;
+    margin-left: 100px;
+}
+.footer_p{
+    position: absolute;
+    margin-top: 480px;
+    margin-left: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
 /*Estilo da Navegação*/
 
 .navegacao {
@@ -64,8 +86,14 @@ footer {
 
 #map {
     width: 100%;
-    height: 500px;
-    margin-top: 20px;
+    height: 490px;
+    margin-top: -45px;
+    margin-bottom: -30px;
+}
+.local{
+    width: 100%;
+    max-width: 1320px;
+    margin-top: -60px;
 }
 
 /*Estilo da pagina sobre*/
@@ -143,8 +171,7 @@ footer {
     padding: 5px;
 }
 .botao_home{
-    margin-left: 475px;
-    margin-bottom: -300px;
+    margin-left: 460px;
 }
 
 /*Estilo dos formularios de login, adicionar e editar*/
@@ -157,13 +184,13 @@ footer {
 }
 
 .card-add {
-    margin-top: -10px;
-    margin-bottom: -260px;
+    margin-top: -5px;
+    margin-bottom: -190px;
 }
 
 .card-edit {
-    margin-top: -10px;
-    margin-bottom: -260px;
+    margin-top: -5px;
+    margin-bottom: -190px;
 }
 .card-login{
     margin-top: -5px;
@@ -196,14 +223,31 @@ footer {
         margin-top: 5px;
     }
     footer {
-        display: block;
+        display: none;
         background-image: none;
         height: 0px;
     }
     .botao_home{
-        margin-bottom: 0px;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
+    #map {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .local{
+        width: 100%;
 
+    }
+    .local-item{
+        margin-top: 20px;
+    }
+    .footer_h1{
+        display: none;
+
+    }
+    .footer_p{
+        display: none;
+    }
 }

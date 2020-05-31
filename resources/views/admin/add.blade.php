@@ -3,7 +3,7 @@
 @section('content')
 
 @if(session('warning'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
             <strong>{{session('warning')}}</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -12,7 +12,7 @@
 @endif
 <div class="card card_style card-add">
   <div class="card-header">
-    <h4><strong>Adicionar Local</strong></h4>
+    <h4 class="text-center"><strong>Adicionar Local</strong></h4>
   </div>
   <div class="card-body bg-light">
     <form method="POST">
