@@ -95,6 +95,11 @@ footer {
     max-width: 1320px;
     margin-top: -60px;
 }
+.botaoMapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*Estilo da pagina sobre*/
 

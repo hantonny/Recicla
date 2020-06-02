@@ -174,7 +174,7 @@ function populateInfoWindow (marker, infowindow) {
     infowindow.addListener('closeclick', function () {
       infowindow.marker = null
     })
-    infowindow.setContent('<div id="pano" align="center"><h4>' + marker.title + '</h4><h6>Horário de Funcionamento: ' + marker.text + '</h6></div>')
+    infowindow.setContent('<div id="pano" align="center"><h6>' + marker.title + '</h6>' + marker.text + '</div>')
     infowindow.open(map, marker)
   }
 }
@@ -272,8 +272,8 @@ function displayMarkersWithinTime (response) {
         // Crie uma mini janela de entrada para abrir imediatamente e conter o
         // distância e duração
         var infowindow = new google.maps.InfoWindow({
-          content: durationText + ' - Distância de: ' + distanceText +
-                  '<div><input type=\"button\" value=\"Ver percurso\" onclick =' +
+          content: '<h6 class=\"text-center\">Tempo Necessário:</br>' + durationText + '</h6>' + '<h6 class=\"text-center\">Distância de: ' + distanceText + '</h6>' +
+                  '<div class=\"botaoMapa\"><input type=\"button\" class=\"btn btn-primary\" value=\"Ver percurso\" onclick =' +
                     '\"displayDirections(&quot;' + origins[i] + '&quot;);\"></input></div>'
         })
         infowindow.open(map, markers[i])

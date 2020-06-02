@@ -31,14 +31,35 @@
           <input type="text" class="form-control" id="lng" name="lng" value="{{old('lng')}}">
       </div>
       <div class="form-group col-6">
-        <label for="lng"><strong>Horário que Abre:</strong></label>
+        <label for="lng"><small><strong>Horário que Abre:</strong></small></label>
         <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_aberto" name="horario_aberto" value="{{old('horario_aberto')}}">
       </div>
       <div class="form-group col-6">
-        <label for="lng"><strong>Horário que Fecha:</strong></label>
+        <label for="lng"><small><strong>Horário que Fecha:</strong></small></label>
         <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_fechado" name="horario_fechado" value="{{old('horario_fechado')}}">
       </div>
-
+      <div class="col-12 local-item m-0">
+        <label for="endereco"><strong>Endereço:</strong></label>
+        <input id="endereco" type="text"
+        placeholder="Digite o seu endereço"
+        class="form-control" name="endereco"><br>
+      </div>
+        <div class="form-group col-12 text-center">
+            <p class="m-0"><strong>Dias de Funcionamento</strong></p>
+        </div>
+        <div class="form-group col-12 text-center">
+        <p>Final de Semana:</p>
+      <input type="checkbox" name="dom" value="Dom"> <span class="m-lg-1">Dom</span>
+      <input type="checkbox" name="sab" value="Sab"> <span class="m-lg-1">Sab</span>
+        </div>
+        <div class="form-group col-12 text-center">
+        <p>Durante a semana:</p>
+      <input type="checkbox" name="seg" value="Seg"> <span class="m-lg-1">Seg</span>
+      <input type="checkbox" name="ter" value="Ter"> <span class="m-lg-1">Ter</span>
+      <input type="checkbox" name="qua" value="Qua"> <span class="m-lg-1">Qua</span>
+      <input type="checkbox" name="qui" value="Qui"> <span class="m-lg-1">Qui</span>
+      <input type="checkbox" name="sex" value="Sex"> <span class="m-lg-1">Sex</span>
+        </div>
       <a class="btn btn-secondary col-4 mx-auto" href="{{route('local.list')}}">Voltar</a>
       <button type="submit" class="btn btn-primary col-4 mx-auto">Adicionar</button>
     </div>

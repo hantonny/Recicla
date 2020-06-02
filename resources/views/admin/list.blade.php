@@ -21,9 +21,11 @@
           <thead class="thead-light">
             <tr class="text-center">
               <th scope="col">Nome</th>
+              <th scope="col">Endereço</th>
               <th scope="col">Latitude</th>
               <th scope="col">Longitude </th>
               <th scope="col" colspan=3>Horário de Funcionamento</th>
+              <th scope="col">Dias de Funcionamento</th>
               <th scope="col" colspan=2 class="text-center table-bordered">Ação</th>
             </tr>
           </thead>
@@ -31,12 +33,14 @@
               @foreach ($list as $item)
             <tr>
               <td>{{$item->nome}}</td>
+              <td>{{$item->endereco}}</td>
               <td class="text-center">{{$item->lat}}</td>
               <td class="text-center">{{$item->lng}}</td>
 
               <td class="text-center"><?php echo date("H:i",strtotime($item->horario_aberto));?></td>
               <td class="text-center">às</td>
               <td class="text-center"><?php echo date("H:i",strtotime($item->horario_fechado));?></td>
+              <td class="text-center">{{$item->dias}}</td>
               <td class="text-center table-bordered"><a href="{{route('local.edit', ['id'=>$item->id])}}" type="button" class="btn btn-primary">Editar</a></td>
               <td class="text-center table-bordered"><a href="{{route('local.del', ['id'=>$item->id])}}" type="button" class="btn btn-danger"
                 onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a></td>
