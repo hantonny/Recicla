@@ -4,7 +4,7 @@
 <div class="container-fluid" id="local">
 <div class="card local">
   <div class="card-header">
-      <h4 class="text-center"><strong>LOCALIZADOR</strong></h4>
+      <h5 class="text-center m-0 p-0"><strong>LOCALIZADOR</strong></h5>
   </div>
   <div class="card-body">
     <form action="" method="post" class="form-group">

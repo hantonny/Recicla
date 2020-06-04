@@ -45,20 +45,37 @@
         class="form-control" name="endereco"><br>
       </div>
         <div class="form-group col-12 text-center">
-            <p class="m-0"><strong>Dias de Funcionamento</strong></p>
+            <p class="m-0"><strong>Dias de Funcionamento:</strong></p>
         </div>
         <div class="form-group col-12 text-center">
-        <p>Final de Semana:</p>
-      <input type="checkbox" name="dom" value="Dom"> <span class="m-lg-1">Dom</span>
-      <input type="checkbox" name="sab" value="Sab"> <span class="m-lg-1">Sab</span>
-        </div>
-        <div class="form-group col-12 text-center">
-        <p>Durante a semana:</p>
-      <input type="checkbox" name="seg" value="Seg"> <span class="m-lg-1">Seg</span>
-      <input type="checkbox" name="ter" value="Ter"> <span class="m-lg-1">Ter</span>
-      <input type="checkbox" name="qua" value="Qua"> <span class="m-lg-1">Qua</span>
-      <input type="checkbox" name="qui" value="Qui"> <span class="m-lg-1">Qui</span>
-      <input type="checkbox" name="sex" value="Sex"> <span class="m-lg-1">Sex</span>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="dom" value="Dom" name="dom">
+                <label class="form-check-label" for="dom">Dom</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="seg" value="Seg" name="seg">
+                <label class="form-check-label" for="seg">Seg</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="ter" value="Ter" name="ter">
+                <label class="form-check-label" for="ter">Ter</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="qua" value="Qua" name="qua">
+                <label class="form-check-label" for="qua">Qua</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="qui" value="Qui" name="qui">
+                <label class="form-check-label" for="qui">Qui</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="sex" value="Sex" name="sex">
+                <label class="form-check-label" for="sex">Sex</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="sab" value="Sab" name="sab">
+                <label class="form-check-label" for="sab">Sab</label>
+            </div>
         </div>
       <a class="btn btn-secondary col-4 mx-auto" href="{{route('local.list')}}">Voltar</a>
       <button type="submit" class="btn btn-primary col-4 mx-auto">Adicionar</button>
