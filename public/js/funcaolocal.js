@@ -174,7 +174,7 @@ function populateInfoWindow (marker, infowindow) {
     infowindow.addListener('closeclick', function () {
       infowindow.marker = null
     })
-    infowindow.setContent('<div id="pano" align="center"><h6>' + marker.title + '</h6>' + marker.text + '</div>')
+    infowindow.setContent('<div align="center"><h4 class="text-success">' + marker.title + '</h4>' + marker.text + '</div>')
     infowindow.open(map, marker)
   }
 }

@@ -77,7 +77,7 @@
         </div>
     </div>
   <a class="btn btn-secondary col-4 mx-auto" href="{{route('local.list')}}">Voltar</a>
-  <button type="submit" class="btn btn-primary col-4 mx-auto">Adicionar</button>
+  <button type="submit" class="btn btn-primary col-4 mx-auto">Salvar</button>
 </div>
 </form>
 </div>

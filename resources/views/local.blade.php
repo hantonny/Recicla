@@ -39,48 +39,24 @@
     <br>
     <div id="map"></div>
 </form>
-
 </div>
 </div>
-
 </div>
-@foreach ($locais as $item)
-@endforeach
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header text-success text-center">
-            <h5 class="modal-title text-center" id="exampleModalLabel">{{$item->nome}}</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <p class="text-center"><strong>Dias de Funcionamento:</strong></p>
-            <p class="text-center">{{$item->dias}}</p>
-            <hr>
-            <p class="text-center"><strong>Horário de Funcionamento:</strong></p>
-            <p class="text-center"><?php echo date("H:i",strtotime($item->horario_aberto));?> às
-                <?php echo date("H:i",strtotime($item->horario_fechado));?>
-            </p>
-            <hr>
-            <p class="text-center"><strong>Endereço:</strong></p>
-            <p class="text-center">{{$item->endereco}}</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        </div>
-        </div>
-    </div>
-    </div>
 <script>
     //Locais marcados no mapa
         var locations = [
         <?php
 
-          foreach($locais as $item){?>
+          foreach($locais as $item){
 
-          {title: '<?php echo $item["nome"];?>', text:'<?php echo '<button type="button" class="btn btn-primary mb-lg-1" data-toggle="modal" data-target="#exampleModal">Informações</button></form>'?>',
+          ?>
+
+          {title: '<?php echo $item["nome"];?>',
+          text: '<hr><h5>Horário de Funcionamento</h5>'+
+          '<h6><?php echo date("H:i",strtotime($item["horario_aberto"]));?> às '+
+            '<?php echo date("H:i",strtotime($item["horario_fechado"]));?></h6>'+
+            '<hr><h5>Dias de Funcionamento</h5><h6><?php echo $item["dias"];?></h6>'+
+            '<hr><h5>Endereço</h5><h6><?php echo $item["endereco"];?></h6>',
           location: {lat: <?php echo $item["lat"];?>,
           lng:  <?php echo $item["lng"];?>}},
         <?php
