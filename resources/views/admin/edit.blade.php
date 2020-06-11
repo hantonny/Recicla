@@ -23,18 +23,18 @@
       </div>
       <div class="form-group col-6">
           <label for="lat"><strong>Latitude:</strong></label>
-          <input type="text" class="form-control" id="lat" name="lat" value="{{$data->lat}}">
+          <input type="text"  class="form-control" id="lat" name="lat" value="{{$data->lat}}">
       </div>
       <div class="form-group col-6">
           <label for="lng"><strong>Longitude:</strong></label>
-          <input type="text" class="form-control" id="lng" name="lng" value="{{$data->lng}}">
+          <input type="text"  class="form-control" id="lng" name="lng" value="{{$data->lng}}">
       </div>
       <div class="form-group col-6">
-        <label for="lng"><small><strong>Horário que Abre:</strong></small></label>
+        <label for="horario_aberto"><small><strong>Horário que Abre:</strong></small></label>
         <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_aberto" name="horario_aberto" value="{{$data->horario_aberto}}">
       </div>
       <div class="form-group col-6">
-        <label for="lng"><small><strong>Horário que Fecha:</strong></small></label>
+        <label for="horario_fechado"><small><strong>Horário que Fecha:</strong></small></label>
         <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_fechado" name="horario_fechado" value="{{$data->horario_fechado}}">
       </div>
       <div class="col-12 local-item m-0">

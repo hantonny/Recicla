@@ -22,7 +22,7 @@ footer {
     margin: auto;
     margin-top: -170px;
     height: 540px;
-    background-image: url('../footer.png');
+    background-image: url('../img/footer.png');
     background-repeat: no-repeat;
     background-position-y: 10px;
     background-position-x: 0px;
@@ -107,14 +107,19 @@ footer {
 
 .carrosel {
     width: 415px;
-    height: 400px;
+    height: 510px;
     background: #219653;
     box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.5);
     margin: auto;
     margin-top: 5px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
-
+.carrosel img{
+    width: 100%;
+    max-width: 150px;
+    margin-top: 5px;
+}
 .card-title {
     font-family: Lato;
     font-style: normal;
@@ -124,7 +129,6 @@ footer {
     text-align: center;
     margin-top: 25px;
 }
-
 .card-text {
     font-family: Lato;
     font-style: normal;
@@ -145,6 +149,11 @@ footer {
 .p_sobre {
     font-size: 25px;
     margin-top: 40px;
+}
+.p_sobre_icon{
+    margin-right: 120px;
+    margin-top: -35px;
+    margin-bottom: 50px;
 }
 
 /*Estilo da pagina home*/
