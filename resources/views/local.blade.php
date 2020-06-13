@@ -12,17 +12,14 @@
       <div class="col-sm-2 d-flex justify-content-center">
         <a href="#localiza" class="btn btn-success form-control" id="show-listings"><strong>MOSTRAR</strong></a>
       </div>
-      <br>
-      <br>
       <div class="col-sm-2 d-flex justify-content-center">
         <a href="#localiza" class="btn btn-success form-control" id="hide-listings"><strong>OCULTAR</strong></a>
       </div>
   <div class="col-sm-4 local-item">
     <input id="search-within-time-text" type="text"
     placeholder="Digite o seu endereço"
-    class="form-control"><br>
+    class="form-control">
   </div>
-
     <div class="col-sm-2">
         <select id="mode" class="form-control">
           <option value="DRIVING">Carro</option>
@@ -31,12 +28,10 @@
           <option value="TRANSIT">Transporte público</option>
         </select>
       </div>
-<br><br><br>
     <div class="col-sm-2">
       <a class="btn btn-success form-control" id="search-within-time" href="#map"><strong>BUSCAR</strong></a>
     </div>
 </div>
-    <br>
     <div id="map"></div>
 </form>
 </div>

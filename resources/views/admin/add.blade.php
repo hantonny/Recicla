@@ -3,12 +3,12 @@
 @section('content')
 
 @if(session('warning'))
-    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-            <strong>{{session('warning')}}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-    </div>
+<div class="alert alert-danger alert-dismissible fade show text-center card_style" role="alert">
+        <strong>{{session('warning')}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+</div>
 @endif
 <div class="card card_style card-add">
   <div class="card-header">
