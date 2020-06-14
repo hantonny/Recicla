@@ -118,7 +118,7 @@ function initMap () {
     }
   })
   // Estilize os marcadores um pouco. Este será o nosso ícone de marcador de listagem.
-  var defaultIcon = makeMarkerIcon('008000')
+  var defaultIcon = makeMarkerIcon('219653')
   // Crie uma cor de marcador "local destacado" para quando o usuário
   // mouses sobre o marcador.
   var highlightedIcon = makeMarkerIcon('00FF7F')

@@ -12,21 +12,18 @@
           <div class="card-body">
           <h5 class="card-title">COMPUTADORES E MONITORES</h5>
           <p class="card-text"><span class="span_texto">O</span>s computadores apresentam muitos componentes diferentes entre si. Quando devidamente encaminhados para um local apropriado, esses componentes serão separados para ser reciclados individualmente. O grande problema reside nas PCIs, placas presentes na maioria dos eletrônicos, principalmente computadores. Elas são enviadas para fora do País, já que o Brasil ainda não tem meios de reciclá-la.</p>
-          <img src="../img/pc.svg" alt="" class="img-fluid rounded mx-auto d-block">
         </div>
           </div>
           <div class="carousel-item">
           <div class="card-body">
           <h5 class="card-title">CELULARES</h5>
           <p class="card-text"><span class="span_texto">O</span>s celulares, bem como suas baterias, normalmente podem ser devolvidos à empresa de telefonia celular. Se não estiverem quebrados, mas apenas ultrapassados, é possível doá-los para centros sociais que trabalham com inclusão digital. Lembre-se sempre que a reutilização também é uma excelente forma de descarte correto!</p>
-          <img src="../img/celular.svg" alt="" class="img-fluid rounded mx-auto d-block">
         </div>
           </div>
           <div class="carousel-item">
           <div class="card-body">
           <h5 class="card-title">PILHAS E BATERIAS</h5>
           <p class="card-text"><span class="span_texto">S</span>ão extremamente comuns no dia a dia, e muita gente não sabe o que fazer com elas. O ideal é que esses itens sejam devolvidos às lojas ou fabricantes, que os encaminharão para um local que realiza a reciclagem do lixo eletrônico. Se o fabricante não oferecer essa opção, você pode procurar por alguma cooperativa local que faça o mesmo processo.</p>
-          <img src="../img/bateria.svg" alt="" class="img-fluid rounded mx-auto d-block">
         </div>
           </div>
         </div>
@@ -40,6 +37,5 @@
         </a>
       </div>
   </div>
-  <p class="text-monospace mb-lg-5 text-center form-control-lg">Ícones feitos por <a href="https://www.flaticon.com/br/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/br/" title="Flaticon"> www.flaticon.com</a></p>
 </div>
 @endsection

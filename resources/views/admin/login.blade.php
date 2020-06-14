@@ -14,6 +14,11 @@
             @foreach($errors->all() as $error)
             @endforeach
 @endif
+<div class="row">
+<div class="col-sm-3">
+    <img src="../img/login.svg" class="image-login">
+</div>
+<div class="col-sm-9">
 <div class="card card_style card-login">
   <div class="card-header">
     <h4 class="text-center"><strong>Login</strong></h4>
@@ -35,13 +40,14 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label"></label>
-          <div class="col-sm-10">
-          <button type="submit" class="btn btn-primary"><strong>ENTRAR</strong></button>
+          <div class="col-sm-12 d-flex justify-content-center align-items-center">
+          <button type="submit" class="btn btn-success"><strong>ENTRAR</strong></button>
           </div>
         </div>
 
     </form>
   </div>
+</div>
+</div>
 </div>
 @endsection

@@ -9,53 +9,46 @@
             </button>
     </div>
 @endif
-
     @if(count($list)> 0)
-    <div class="card">
-      <div class="card-header">
-        <h4 class="text-center"><strong>Listagem de Locais</strong></h4>
-      </div>
-      <div class="card-body">
-        <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead class="thead-light">
-            <tr class="text-center">
-              <th scope="col">Nome</th>
-              <th scope="col">Endereço</th>
-              <th scope="col">Latitude</th>
-              <th scope="col">Longitude </th>
-              <th scope="col" colspan=3>Horário de Funcionamento</th>
-              <th scope="col">Dias de Funcionamento</th>
-              <th scope="col" colspan=2 class="text-center table-bordered">Ação</th>
-            </tr>
-          </thead>
-          <tbody>
-              @foreach ($list as $item)
-            <tr>
-              <td>{{$item->nome}}</td>
-              <td>{{$item->endereco}}</td>
-              <td class="text-center">{{$item->lat}}</td>
-              <td class="text-center">{{$item->lng}}</td>
-
-              <td class="text-center"><?php echo date("H:i",strtotime($item->horario_aberto));?></td>
-              <td class="text-center">às</td>
-              <td class="text-center"><?php echo date("H:i",strtotime($item->horario_fechado));?></td>
-              <td class="text-center">{{$item->dias}}</td>
-              <td class="text-center table-bordered"><a href="{{route('local.edit', ['id'=>$item->id])}}" type="button" class="btn btn-primary">Editar</a></td>
-              <td class="text-center table-bordered"><a href="{{route('local.del', ['id'=>$item->id])}}" type="button" class="btn btn-danger"
-                onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a></td>
-            </tr>
+        <h1 class="text-center mb-3"><strong>Listagem de Locais</strong></h1>
+            @foreach ($list as $item)
+            <div class="card-list">
+            <div class="card">
+              <div class="card-header">
+                <p class="p-titulo text-center">{{$item->nome}}</p>
+                </h2>
+              </div>
+                <div class="card-body">
+                    <div class="row">
+                    <div class="col-sm-12">
+                        <p class="p-list text-center"><strong>Endereço:</strong> {{$item->endereco}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="p-list text-center"><strong>Latitude:</strong> {{$item->lat}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="p-list text-center"><strong>Longitude:</strong> {{$item->lng}}</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="p-list text-center"><strong>Horário de Funcionamento:</strong> <?php echo date("H:i",strtotime($item->horario_aberto));?> às <?php echo date("H:i",strtotime($item->horario_fechado));?></p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="p-list text-center"><strong>Dias de Funcionamento:</strong></p>
+                        <p class="p-list text-center">{{$item->dias}}</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row d-flex justify-content-center">
+                        <p><a href="{{route('local.edit', ['id'=>$item->id])}}" type="button" class="ml-lg-3 mr-lg-4"><img src="../img/editar.svg" alt="" width="34"></a></p>
+                        <p><a href="{{route('local.del', ['id'=>$item->id])}}" type="button" class=""
+                            onclick="return confirm('Tem certeza que deseja excluir?')"><img src="../img/lixo.svg" alt="" width="34"></a></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
             @endforeach
-          </tbody>
-        </table>
-        <ul class="pagination justify-content-center">{{$list->links()}}</ul>
-
-      </div>
       @else
           <h2 class="text-center">Não há locais cadastrados a serem listados</h2>
       @endif
-      </div>
-    </div>
-
-
 @endsection

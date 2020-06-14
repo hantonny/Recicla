@@ -17,9 +17,15 @@
     <form method="POST">
       @csrf
       <div class="row">
-      <div class="form-group col-12">
+      <div class="form-group col-6">
         <label for="nome"><strong>Nome:</strong></label>
       <input type="text" class="form-control" id="nome" name="nome" value="{{$data->nome}}">
+      </div>
+      <div class="col-6 local-item m-0">
+        <label for="endereco"><strong>Endereço:</strong></label>
+        <input id="endereco" type="text"
+        placeholder="Digite o seu endereço"
+        class="form-control" name="endereco" value="{{$data->endereco}}"><br>
       </div>
       <div class="form-group col-6">
           <label for="lat"><strong>Latitude:</strong></label>
@@ -36,12 +42,6 @@
       <div class="form-group col-6">
         <label for="horario_fechado"><small><strong>Horário que Fecha:</strong></small></label>
         <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_fechado" name="horario_fechado" value="{{$data->horario_fechado}}">
-      </div>
-      <div class="col-12 local-item m-0">
-        <label for="endereco"><strong>Endereço:</strong></label>
-        <input id="endereco" type="text"
-        placeholder="Digite o seu endereço"
-        class="form-control" name="endereco" value="{{$data->endereco}}"><br>
       </div>
       <div class="form-group col-12 text-center">
         <p class="m-0"><strong>Dias de Funcionamento:</strong></p>

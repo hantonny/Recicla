@@ -2,11 +2,6 @@
 
 @section('content')
 <div class="container-fluid" id="local">
-<div class="card local">
-  <div class="card-header">
-      <h5 class="text-center m-0 p-0"><strong>LOCALIZADOR</strong></h5>
-  </div>
-  <div class="card-body">
     <form action="" method="post" class="form-group">
     <div class="row">
       <div class="col-sm-2 d-flex justify-content-center">

@@ -1,7 +1,6 @@
 @extends('layouts.estiloadm')
 
 @section('content')
-
 @if(session('warning'))
 <div class="alert alert-danger alert-dismissible fade show text-center card_style" role="alert">
         <strong>{{session('warning')}}</strong>
@@ -10,6 +9,11 @@
         </button>
 </div>
 @endif
+<div class="row">
+<div class="col-sm-4">
+    <img src="../img/add.svg" alt="" class="img-fluid image-add">
+</div>
+<div class="col-sm-8">
 <div class="card card_style card-add">
   <div class="card-header">
     <h4 class="text-center"><strong>Adicionar Local</strong></h4>
@@ -18,9 +22,15 @@
     <form method="POST">
       @csrf
       <div class="row">
-      <div class="form-group col-12">
+      <div class="form-group col-6">
         <label for="nome"><strong>Nome:</strong></label>
         <input type="text" class="form-control" id="nome" name="nome" value="{{old('nome')}}">
+      </div>
+      <div class="col-6 local-item m-0">
+        <label for="endereco"><strong>Endereço:</strong></label>
+        <input id="endereco" type="text"
+        placeholder="Digite o seu endereço"
+        class="form-control" name="endereco"><br>
       </div>
       <div class="form-group col-6">
           <label for="lat"><strong>Latitude:</strong></label>
@@ -38,12 +48,7 @@
         <label for="horario_fechado"><small><strong>Horário que Fecha:</strong></small></label>
         <input type="time" min="07:00" max="20:00" required class="form-control" id="horario_fechado" name="horario_fechado" value="{{old('horario_fechado')}}">
       </div>
-      <div class="col-12 local-item m-0">
-        <label for="endereco"><strong>Endereço:</strong></label>
-        <input id="endereco" type="text"
-        placeholder="Digite o seu endereço"
-        class="form-control" name="endereco"><br>
-      </div>
+
         <div class="form-group col-12 text-center">
             <p class="m-0"><strong>Dias de Funcionamento:</strong></p>
         </div>
@@ -82,5 +87,7 @@
     </div>
     </form>
   </div>
+</div>
+</div>
 </div>
 @endsection
