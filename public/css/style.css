@@ -183,6 +183,9 @@ section {
     padding: 1px;
     color: #322153;
 }
+.p_fonte{
+    font-size: 12px;
+}
 /*Estilo dos formularios de login, adicionar e editar*/
 
 .card_style {

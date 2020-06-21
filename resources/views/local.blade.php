@@ -8,7 +8,7 @@
         <a href="#localiza" class="btn btn-success form-control" id="show-listings"><strong>MOSTRAR</strong></a>
       </div>
       <div class="col-sm-2 d-flex justify-content-center">
-        <a href="#localiza" class="btn btn-success form-control" id="hide-listings"><strong>OCULTAR</strong></a>
+        <a href="#localiza" class="btn btn-success form-control" type="button" value="LIMPAR" onClick="history.go(0)" id="hide-listings"><strong>LIMPAR</strong></a>
       </div>
   <div class="col-sm-4 local-item">
     <input id="search-within-time-text" type="text"

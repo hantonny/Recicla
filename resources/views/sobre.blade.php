@@ -3,7 +3,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6 mb-5">
-      <h1 class="display-4"><strong>Materias que pode ser reciclados.</strong></h1>
+      <h1 class="display-4"><strong>Material que pode ser reciclado.</strong></h1>
       <p class="p_sobre text-justify">O ideal é que esses itens sejam devolvidos às lojas ou fabricantes, que os encaminharão para um local que realiza a reciclagem do lixo eletrônico. Se o fabricante não oferecer essa opção, você pode procurar por alguma cooperativa local que faça o mesmo processo.</p>
     </div>
       <div id="carouselExampleControls" class="carousel slide carrosel" data-ride="carousel">

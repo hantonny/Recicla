@@ -248,7 +248,6 @@ function searchWithinTime () {
 // se a distância for MENOR que o valor no selecionador, mostre-a no mapa.
 function displayMarkersWithinTime (response) {
   var origins = response.originAddresses
-  var destinations = response.destinationAddresses
   // Analise os resultados e obtenha a distância e a duração de cada uma.
   // Como pode haver várias origens e destinos, temos um loop aninhado
   // Então, verifique se pelo menos 1 resultado foi encontrado.
