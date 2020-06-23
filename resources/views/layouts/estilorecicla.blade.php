@@ -20,20 +20,38 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
+            @if(!Auth::user())
             <li class="nav-item">
               <a class="menu-item text-decoration-none" href="{{route('sobre')}}">Sobre</a>
             </li>
+            @endif
+            @if(Auth::user())
+                <li class="nav-item">
+                    <a class="menu-item text-decoration-none" href="{{route('local.list')}}">Listagem de Locais</a>
+                </li>
+            @endif
+            @if(Auth::user())
+                <li class="nav-item">
+                <a class="menu-item text-decoration-none" href="{{route('local.add')}}">Adicionar Local</a>
+              </li>
+            @endif
+            @if(Auth::user())
+              <li class="nav-item">
+                <a class="menu-item text-decoration-none" href="{{route('logout')}}" tabindex="-1" aria-disabled="true">Sair</a>
+              </li>
+            @else
             <li class="nav-item">
-              <a class="menu-item text-decoration-none" href="{{route('login')}}">Login</a>
-            </li>
+                <a class="menu-item text-decoration-none" href="{{route('login')}}">Login</a>
+              </li>
+            @endif
             <li class="nav-item">
                 <a class="menu-item text-decoration-none ultimo" href="{{route('localiza')}}" tabindex="-1" aria-disabled="true">Localizar</a>
               </li>
           </ul>
           <hr>
-            <a href="{{route('localiza')}}">
-              <button class="btn botao" type="submit"><strong>LOCALIZAR</strong></button>
-            </a>
+          <a href="{{route('localiza')}}">
+            <button class="btn btn-success" type="submit"><strong>LOCALIZAR</strong></button>
+          </a>
         </div>
       </nav>
     </header>

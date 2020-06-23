@@ -1,4 +1,4 @@
-@extends('layouts.estiloadm')
+@extends('layouts.estilorecicla')
 
 @section('content')
 @if(session('warning'))
