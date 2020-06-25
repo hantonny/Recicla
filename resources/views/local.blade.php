@@ -42,7 +42,7 @@
           ?>
 
           {title: '<?php echo $item["nome"];?>',
-          text: '<hr><h5>Horário de Funcionamento</h5>'+
+          text: '<h5>Horário de Funcionamento</h5>'+
           '<h6><?php echo date("H:i",strtotime($item["horario_aberto"]));?> às '+
             '<?php echo date("H:i",strtotime($item["horario_fechado"]));?></h6>'+
             '<hr><h5>Dias de Funcionamento</h5><h6><?php echo $item["dias"];?></h6>'+
@@ -54,6 +54,21 @@
         ?>
         ];
 </script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyAAApZxIhZ9wBM2wLKlwNGHxUFvqWx5-_0&callback=initMap"
-    async defer></script>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title text-center text-success" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body" id="corpo">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+        </div>
+    </div>
+    </div>
 @endsection

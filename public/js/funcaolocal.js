@@ -173,9 +173,15 @@ function populateInfoWindow (marker, infowindow) {
     // Verifique se a propriedade do marcador está limpa se a janela de entrada estiver fechada.
     infowindow.addListener('closeclick', function () {
       infowindow.marker = null
+      marker.setAnimation(null)
     })
-    infowindow.setContent('<div align="center"><h4 class="text-success">' + marker.title + '</h4>' + marker.text + '</div>')
+    infowindow.setContent('<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"><strong>INFORMAÇÕES</strong></button>')
+    var element = document.getElementById('corpo')
+    element.innerHTML = marker.text
+    var title = document.getElementById('exampleModalLabel')
+    title.innerHTML = marker.title
     infowindow.open(map, marker)
+    marker.setAnimation(google.maps.Animation.BOUNCE)
   }
 }
 // Esta função percorrerá a matriz de marcadores e exibirá todos eles.
@@ -216,7 +222,7 @@ function searchWithinTime () {
   var address = document.getElementById('search-within-time-text').value
   // Verifique se o local digitado não está em branco.
   if (address === '') {
-    window.alert('Você deve inserir um endereço. ')
+    window.alert('Você deve informar um endereço.')
   } else {
     hideMarkers(markers)
     // Use o serviço de matriz de distância para calcular a duração do
