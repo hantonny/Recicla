@@ -50,7 +50,7 @@
           </ul>
           <hr>
           <a href="{{route('localiza')}}">
-            <button class="btn btn-success" type="submit"><strong>LOCALIZAR</strong></button>
+            <button class="btn btn-success botao" type="submit"><strong>LOCALIZAR</strong></button>
           </a>
         </div>
       </nav>
