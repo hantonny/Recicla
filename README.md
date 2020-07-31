@@ -3,14 +3,14 @@
 </h1>
 
 <h2 align="center">
-    PROJETO RECICLA 
+    RECICLA 
 </h2>
 
 ## 💻 Projeto
 
 <h1>Objetivo do Projeto:</h1>
-<p>Sistema web de localização para o descarte de e-lixo. Dessa forma auxiliando o consumidor a encontrar em sua cidade pontos de coletas de e-lixo e mostra informações sobre esses pontos de coletas.
-</p>
+<h2>Auxiliar o consumidor a encontrar em sua cidade pontos de coletas de e-lixo.
+</h2>
 
 ## 💻 Tecnologia
 
