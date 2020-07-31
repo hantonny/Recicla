@@ -20,6 +20,6 @@
 
 ---
 
-Feito com 💜 por <b>Hantonny Korrea</b>
+Feito com 💜 por <a href="https://www.linkedin.com/in/hantonny-korrea-2853911a0/"><b>Hantonny Korrea</b></a>
 
 
