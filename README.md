@@ -2,19 +2,15 @@
     <img alt="Recicla" title="#recicla" src="/public/logo.png" width="350px"/>
 </h1>
 
-<h2 align="center">
-    RECICLA 
-</h2>
-
 ## 💻 Projeto
 
-<h1>Objetivo do Projeto:</h1>
-<h2>Auxiliar o consumidor a encontrar em sua cidade pontos de coletas de e-lixo.
-</h2>
+<h2>Objetivo do Projeto:</h2>
+<h3>Auxiliar o consumidor a encontrar em sua cidade pontos de coletas de e-lixo.
+</h3>
 
-## 💻 Tecnologia
+## 💻 Tecnologias
 
-Este projeto foi desenvolvido com as seguintes tecnologias:
+<h3>Este projeto foi desenvolvido com as seguintes tecnologias:</h3>
 
 -   [PHP](https://www.php.net)
 -   [Laravel](https://laravel.com/)
